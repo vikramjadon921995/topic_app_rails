@@ -1,0 +1,4 @@
+<%= form_for @topic, url: {action: "create"} do |f| %>
+  <%= f.text_field :title, placeholder: "Title", class: "form-control" %>
+  <%= f.submit "Save Topic", class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,19 @@
+<h5>Topics</h5>
+
+<ul class="collection">
+	<% @topics.each do |topic| %>
+		<li class="collection-item">
+			<%= topic.title %>
+			<div class="right">
+				<%= link_to "Edit", edit_topic_path(topic) %>
+				<%= link_to "Delete", topic,  method: :delete, data: { confirm: 'Are you sure?' } %>
+			</div>
+		</li>
+	<% end %>
+</ul>
+
+<div class="fixed-action-btn">
+	<%= link_to new_topic_path do %>
+		<i class="material-icons">add</i>
+	<% end %> 
+</div>
